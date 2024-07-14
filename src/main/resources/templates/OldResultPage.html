@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Download Time Calculator</title>
+</head>
+<body>
+<h1>Download Time Calculator</h1>
+<p>Download Time:</p>
+<ul>
+  <li>Seconds: <span th:text="${downloadTimeInSeconds}"></span></li>
+  <li>Minutes: <span th:text="${downloadTimeInMinutes}"></span></li>
+  <li>Hours: <span th:text="${downloadTimeInHours}"></span></li>
+</ul>
+<a href="/">Back</a>
+</body>
+</html>

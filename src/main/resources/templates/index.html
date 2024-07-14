@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Download Time Calculator</title>
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+  <h1 class="text-center">Download Time Calculator</h1>
+  <form action="/calculate" method="post" class="mt-4">
+    <div class="form-group">
+      <label for="fileSize">File Size:</label>
+      <input type="number" id="fileSize" name="fileSize" class="form-control" step="0.01" required>
+    </div>
+    <div class="form-group">
+      <label for="unit">Unit:</label>
+      <select id="unit" name="unit" class="form-control">
+        <option value="MB">MB</option>
+        <option value="GB">GB</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="internetSpeed">Internet Speed (Mbps):</label>
+      <input type="number" id="internetSpeed" name="internetSpeed" class="form-control" step="0.01" required>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Calculate</button>
+  </form>
+  <div class="error mt-3" th:if="${error}">
+    <p th:text="${error}"></p>
+  </div>
+</div>
+</body>
+</html>
