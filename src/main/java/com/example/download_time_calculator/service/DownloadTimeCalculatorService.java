@@ -23,15 +23,15 @@ public class DownloadTimeCalculatorService {
      * @return Download time (second)
      */
     public double calculateDownloadTimeInSeconds(double fileSize, double internetSpeedMbps, boolean isGB) {
-        double fileSizeMB; // GB to MB dönüşümü
+        double fileSizeMB;
         if(isGB){
             fileSizeMB = fileSize * BYTES_IN_A_GIGABYTE;
         }
         else{
             fileSizeMB = fileSize;
         }
-        double fileSizeMb = fileSizeMB * BITS_IN_A_BYTE; // MB to Mb dönüşümü
-        return fileSizeMb / internetSpeedMbps; // saniye cinsinden
+        double fileSizeMb = fileSizeMB * BITS_IN_A_BYTE;
+        return fileSizeMb / internetSpeedMbps;
     }
 
     /**
@@ -52,7 +52,7 @@ public class DownloadTimeCalculatorService {
         }
         double fileSizeMb = fileSizeMB * BITS_IN_A_BYTE;
         double downloadTimeInSeconds = fileSizeMb / internetSpeedMbps;
-        return downloadTimeInSeconds / SECONDS_IN_A_MINUTE; // dakikaya dönüşüm
+        return downloadTimeInSeconds / SECONDS_IN_A_MINUTE;
     }
 
     /**
@@ -74,7 +74,7 @@ public class DownloadTimeCalculatorService {
         double fileSizeMb = fileSizeMB * BITS_IN_A_BYTE;
 
         double downloadTimeInMinutes = fileSizeMb / internetSpeedMbps / SECONDS_IN_A_MINUTE;
-        return downloadTimeInMinutes / MINUTES_IN_AN_HOUR; // saate dönüşüm
+        return downloadTimeInMinutes / MINUTES_IN_AN_HOUR;
     }
 
     /**
