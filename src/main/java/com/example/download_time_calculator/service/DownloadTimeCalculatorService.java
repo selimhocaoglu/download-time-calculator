@@ -83,7 +83,7 @@ public class DownloadTimeCalculatorService {
      * @param fileSize File size (MB or GB)
      * @param internetSpeedMbps Internet speed (Mbps)
      * @param isGB Show file size is GB or not
-     * @return Download time (for human understandable)
+     * @return Download time (human understandable)
      */
     public String calculateHumanUnderstandableDownloadTime(double fileSize, double internetSpeedMbps, boolean isGB){
         double totalSeconds = calculateDownloadTimeInSeconds(fileSize, internetSpeedMbps, isGB);
