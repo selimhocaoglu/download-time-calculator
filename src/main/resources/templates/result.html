@@ -10,7 +10,8 @@
 <div class="container mt-5">
     <h1 class="text-center">Download Time Calculator</h1>
     <div class="result mt-4">
-        <p>Download Time: <span th:text="${humanUnderstandableDownloadTime}"></span></p>
+        <p><strong>Download Time:</strong> <span th:text="${humanUnderstandableDownloadTime}"></span></p>
+        <p><strong>End Time:</strong> <span th:text="${endDateTime}">N/A</span></p>
     </div>
     <a href="/" class="btn btn-secondary btn-block mt-3">Back</a>
 </div>

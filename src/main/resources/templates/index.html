@@ -5,6 +5,18 @@
   <title>Download Time Calculator</title>
   <link rel="stylesheet" th:href="@{/css/styles.css}">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script>
+    function setCurrentTime() {
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = ('0' + (now.getMonth() + 1)).slice(-2);
+      const day = ('0' + now.getDate()).slice(-2);
+      const hours = ('0' + now.getHours()).slice(-2);
+      const minutes = ('0' + now.getMinutes()).slice(-2);
+      const localDateTime = `${year}-${month}-${day}T${hours}:${minutes}`;
+      document.getElementById('startTime').value = localDateTime;
+    }
+  </script>
 </head>
 <body>
 <div class="container mt-5">
@@ -26,6 +38,11 @@
         <div class="form-group">
           <label for="internetSpeed">Internet Speed (Mbps):</label>
           <input type="number" id="internetSpeed" name="internetSpeed" class="form-control" step="0.01" required>
+        </div>
+        <div class="form-group">
+          <label for="startTime">Start Time:</label>
+          <input type="datetime-local" id="startTime" name="startTime" class="form-control" required>
+          <button type="button" class="btn btn-secondary mt-2" onclick="setCurrentTime()">Set Current Time</button>
         </div>
         <button type="submit" class="btn btn-primary btn-block">Calculate</button>
       </form>
