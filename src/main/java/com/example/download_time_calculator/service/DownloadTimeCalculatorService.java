@@ -15,12 +15,12 @@ public class DownloadTimeCalculatorService {
     private final double SECONDS_IN_AN_HOUR = 3600.0;
 
     /**
-     * Dosya indirme süresini saniye cinsinden hesaplar.
+     * Calculate download time by type of seconds.
      *
-     * @param fileSize Dosya boyutu (MB veya GB)
-     * @param internetSpeedMbps İnternet hızı (Mbps)
-     * @param isGB Dosya boyutunun GB cinsinden olup olmadığını belirtir
-     * @return İndirme süresi (saniye)
+     * @param fileSize File size (MB or GB)
+     * @param internetSpeedMbps Internet speed (Mbps)
+     * @param isGB Show file size is GB or not
+     * @return Download time (second)
      */
     public double calculateDownloadTimeInSeconds(double fileSize, double internetSpeedMbps, boolean isGB) {
         double fileSizeMB; // GB to MB dönüşümü
@@ -35,12 +35,12 @@ public class DownloadTimeCalculatorService {
     }
 
     /**
-     * Dosya indirme süresini dakika cinsinden hesaplar.
+     * Calculate download time by type of minutes.
      *
-     * @param fileSize Dosya boyutu (MB veya GB)
-     * @param internetSpeedMbps İnternet hızı (Mbps)
-     * @param isGB Dosya boyutunun GB cinsinden olup olmadığını belirtir
-     * @return İndirme süresi (dakika)
+     * @param fileSize File Size (MB or GB)
+     * @param internetSpeedMbps Internet speed (Mbps)
+     * @param isGB Show file size is GB or not
+     * @return Download time (minute)
      */
     public double calculateDownloadTimeInMinutes(double fileSize, double internetSpeedMbps, boolean isGB) {
         double fileSizeMB;
@@ -56,12 +56,12 @@ public class DownloadTimeCalculatorService {
     }
 
     /**
-     * Dosya indirme süresini saat cinsinden hesaplar.
+     * Calculate download time by type of hours.
      *
-     * @param fileSize Dosya boyutu (MB veya GB)
-     * @param internetSpeedMbps İnternet hızı (Mbps)
-     * @param isGB Dosya boyutunun GB cinsinden olup olmadığını belirtir
-     * @return İndirme süresi (saat)
+     * @param fileSize File size (MB or GB)
+     * @param internetSpeedMbps Internet speed (Mbps)
+     * @param isGB Show file size is GB or not
+     * @return Download time (hour)
      */
     public double calculateDownloadTimeInHours(double fileSize, double internetSpeedMbps, boolean isGB) {
         double fileSizeMB;
@@ -78,12 +78,12 @@ public class DownloadTimeCalculatorService {
     }
 
     /**
-     * Dosya indirme süresini insana hitap eder formatta hesaplar.
+     * Calculate download time by type of understandable for human.
      *
-     * @param fileSize Dosya boyutu (MB veya GB)
-     * @param internetSpeedMbps İnternet hızı (Mbps)
-     * @param isGB Dosya boyutunun GB cinsinden olup olmadığını belirtir
-     * @return İndirme süresi (insana hitap eder formatta)
+     * @param fileSize File size (MB or GB)
+     * @param internetSpeedMbps Internet speed (Mbps)
+     * @param isGB Show file size is GB or not
+     * @return Download time (for human understandable)
      */
     public String calculateHumanUnderstandableDownloadTime(double fileSize, double internetSpeedMbps, boolean isGB){
         double totalSeconds = calculateDownloadTimeInSeconds(fileSize, internetSpeedMbps, isGB);
