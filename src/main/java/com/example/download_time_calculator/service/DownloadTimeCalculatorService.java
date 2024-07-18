@@ -78,7 +78,7 @@ public class DownloadTimeCalculatorService {
     }
 
     /**
-     * Calculate download time by type of understandable for human.
+     * Calculate download time understandable for human.
      *
      * @param fileSize File size (MB or GB)
      * @param internetSpeedMbps Internet speed (Mbps)
