@@ -20,7 +20,7 @@ public class DownloadTimeCalculatorService {
      * @param fileSize File size (MB or GB)
      * @param internetSpeedMbps Internet speed (Mbps)
      * @param isGB Show file size is GB or not
-     * @return Download time (second)
+     * @return Download time (seconds)
      */
     public double calculateDownloadTimeInSeconds(double fileSize, double internetSpeedMbps, boolean isGB) {
         double fileSizeMB;
@@ -40,7 +40,7 @@ public class DownloadTimeCalculatorService {
      * @param fileSize File Size (MB or GB)
      * @param internetSpeedMbps Internet speed (Mbps)
      * @param isGB Show file size is GB or not
-     * @return Download time (minute)
+     * @return Download time (minutes)
      */
     public double calculateDownloadTimeInMinutes(double fileSize, double internetSpeedMbps, boolean isGB) {
         double fileSizeMB;
@@ -61,7 +61,7 @@ public class DownloadTimeCalculatorService {
      * @param fileSize File size (MB or GB)
      * @param internetSpeedMbps Internet speed (Mbps)
      * @param isGB Show file size is GB or not
-     * @return Download time (hour)
+     * @return Download time (hours)
      */
     public double calculateDownloadTimeInHours(double fileSize, double internetSpeedMbps, boolean isGB) {
         double fileSizeMB;
